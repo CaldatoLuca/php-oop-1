@@ -1,31 +1,21 @@
 <?php
 
 require_once __DIR__ . '/models/movie.php';
+require __DIR__ . '/data/movies.php';
 
-$tre_uomini_e_una_gamba = new Movie('Tre uomini e una gamba', 'Aldo, Giovanni e Giacomo', 1997, ['Commedia', 'Comico']);
-$quo_vado = new Movie('Quo vado?', 'Checco Zalone', 2016, ['Commedia', 'Comico']);
+foreach ($movies as $movie) {
+    $movie = new Movie($movie['title'], $movie['director'], $movie['year'], $movie['genres']);
 
+    echo $movie->title;
+    echo '<br>';
+    echo $movie->director;
+    echo '<br>';
+    echo $movie->year;
+    echo '<br>';
+    foreach ($movie->getGenre() as $genre) {
+        echo $genre . ' ';
+    }
+    echo '<br>';
 
-echo $tre_uomini_e_una_gamba->title;
-echo '<br>';
-echo $tre_uomini_e_una_gamba->director;
-echo '<br>';
-echo $tre_uomini_e_una_gamba->year;
-echo '<br>';
-foreach ($tre_uomini_e_una_gamba->getGenre() as $genre) {
-    echo $genre . ' ';
+    echo '<hr />';
 }
-echo '<br>';
-
-echo '<hr />';
-
-echo $quo_vado->title;
-echo '<br>';
-echo $quo_vado->director;
-echo '<br>';
-echo $quo_vado->year;
-echo '<br>';
-foreach ($quo_vado->getGenre() as $genre) {
-    echo $genre . ' ';
-}
-echo '<br>';
