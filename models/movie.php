@@ -6,16 +6,19 @@ class Movie
     public $director;
     public $year;
     public array $genre;
+    public $description;
     function __construct(
         $_title,
         $_director,
         $_year,
-        $_genre
+        $_genre,
+        $_description
     ) {
         $this->title = $_title;
         $this->director = $_director;
         $this->year = $_year;
         $this->genre = $_genre;
+        $this->description = $_description;
     }
     /**
      * setGenre: funzione per scrivere genere
