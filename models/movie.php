@@ -5,7 +5,7 @@ class Movie
     public $title;
     public $director;
     public $year;
-    public $genre;
+    public array $genre;
     function __construct(
         $_title,
         $_director,
@@ -32,7 +32,7 @@ class Movie
     /**
      * getGenre: funzione per leggere genere movie
      *
-     * @return string
+     * @return array
      */
     public function getGenre()
     {
