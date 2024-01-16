@@ -48,9 +48,9 @@ Ovviamente la stampa non potrà più avvenire con un semplice echo, per questo h
 
 #### Bonus 2
 
-Per questo bonus ho creato un 'database' `data/movies.php` dove raccolgo tutti i movies necessari tramite array.
+Per questo bonus ho creato un 'database' `database/db.php` dove raccolgo tutti i movies necessari tramite array.
 
-Per stamparli a schermo con dello style inserisco il `foreach` nella pagina `components/body.php`, che sarà il body della pagina `insex.php`.
+Per stamparli a schermo con dello style inserisco il `foreach` nella pagina `components/body.php`, che sarà il body della pagina `index.php`.
 
 Il `foreach` andrà a creare a ogni ciclo una nuova istanza che verrà usata per riempire il contenuto degli elementi html principali della pagina.
 
