@@ -2,11 +2,13 @@
 
 class Movie
 {
-    public $title;
-    public $director;
-    public $year;
+    public string $title;
+    public string $director;
+    public int $year;
     public array $genre;
-    public $description;
+    public string $description;
+
+    //costruttore
     function __construct(
         $_title,
         $_director,
@@ -20,6 +22,8 @@ class Movie
         $this->genre = $_genre;
         $this->description = $_description;
     }
+
+
     /**
      * setGenre: funzione per scrivere genere
      *

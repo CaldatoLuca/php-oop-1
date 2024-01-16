@@ -23,25 +23,28 @@
                                 <span class="-lc-genre-year "><?php echo $genre . ' ' ?></span>
                             <?php endforeach ?>
 
+                            <!-- offcanva -->
                             <div class="-lc-canva-description mt-3">
-                                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop<?php echo $i ?>" aria-controls="staticBackdrop<?php echo $i ?>">
                                     View Description
                                 </button>
 
-                                <div class="offcanvas offcanvas-start bg-warning text-dark" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+
+                                <div class="offcanvas offcanvas-start bg-warning text-dark" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop<?php echo $i ?>" aria-labelledby="staticBackdrop<?php echo $i ?>Label">
                                     <div class="offcanvas-header">
                                         <h5 class="-lc-movie-title"><?php echo $movie->title ?></h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                     </div>
                                     <div class="offcanvas-body">
                                         <!-- descrizione -->
-                                        <div class="-lc-description-year"><?php echo $movie->description ?></div>
+                                        <div class="-lc-movie-description"><?php echo $movie->description ?></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php $i++ ?>
             <?php endforeach; ?>
         </div>
     </div>
